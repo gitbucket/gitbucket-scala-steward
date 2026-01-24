@@ -3,6 +3,7 @@
 - gitbucket/gitbucket-announce-plugin
 - gitbucket/gitbucket-emoji-plugin
 - gitbucket/gitbucket-explorer-plugin
+- gitbucket/gitbucket-gist-plugin
 - gitbucket/gitbucket-h2-backup-plugin
 - gitbucket/gitbucket-notifications-plugin
 - gitbucket/gitbucket-pages-plugin
