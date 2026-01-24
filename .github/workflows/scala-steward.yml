@@ -1,0 +1,24 @@
+on:
+  schedule:
+  - cron: '0 17 * * *'
+  workflow_dispatch:
+concurrency: steward
+jobs:
+  scala-steward:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if: ${{ github.repository_owner == 'gitbucket' }}
+    steps:
+    - uses: actions/checkout@v6
+    - id: generate_token
+      uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
+      with:
+        app-id: 2717647
+        private-key: ${{ secrets.GITBUCKET_BOT_KEY }}
+        owner: ${{ github.repository_owner }}
+    - uses: scala-steward-org/scala-steward-action@5bbb0a3f32b42774f8ba1ed18c29db5d915d2200 # v2.80.0
+      with:
+        github-token: ${{ steps.generate_token.outputs.token }}
+        author-email: "256891351+gitbucket-bot[bot]@users.noreply.github.com"
+        author-name: "gitbucket-bot[bot]"
+        repos-file: "repos.md"
