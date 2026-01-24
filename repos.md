@@ -1,0 +1,10 @@
+- gitbucket/blocking-slick
+- gitbucket/gitbucket
+- gitbucket/gitbucket-announce-plugin
+- gitbucket/gitbucket-emoji-plugin
+- gitbucket/gitbucket-explorer-plugin
+- gitbucket/gitbucket-h2-backup-plugin
+- gitbucket/gitbucket-notifications-plugin
+- gitbucket/gitbucket-pages-plugin
+- gitbucket/gitbucket-plugin-template
+- gitbucket/sbt-gitbucket-plugin
