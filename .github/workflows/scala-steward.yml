@@ -19,7 +19,7 @@ jobs:
         client-id: 2717647
         private-key: ${{ secrets.GITBUCKET_BOT_KEY }}
         owner: ${{ github.repository_owner }}
-    - uses: scala-steward-org/scala-steward-action@3e385b8d413cf0315a939eebf555628120f5e74c # v2.95.0
+    - uses: scala-steward-org/scala-steward-action@6162b21b93d4be314a61ce0462fd026630132fee # v2.96.0
       with:
         github-token: ${{ steps.generate_token.outputs.token }}
         author-email: "256891351+gitbucket-bot[bot]@users.noreply.github.com"
